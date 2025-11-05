@@ -1,5 +1,5 @@
 import useSWR from "swr"
-import type { User } from "../types/user"
+import type { User } from "../../src/hooks/types/user"
 
 const fetcher = (url: string) => fetch(url).then((res) => res.json())
 

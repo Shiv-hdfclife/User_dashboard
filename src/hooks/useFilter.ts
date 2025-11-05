@@ -1,7 +1,7 @@
 "use client"
 
 import { useMemo } from "react"
-import type { User } from "../types/user"
+import type { User } from "../../src/hooks/types/user"
 
 export const useFilter = (users: User[], searchTerm: string) => {
   const filteredUsers = useMemo(() => {
@@ -12,7 +12,7 @@ export const useFilter = (users: User[], searchTerm: string) => {
       (user) =>
         user.name.toLowerCase().includes(lowerSearchTerm) ||
         user.email.toLowerCase().includes(lowerSearchTerm) ||
-        user.username.toLowerCase().includes(lowerSearchTerm),
+        user.name.toLowerCase().includes(lowerSearchTerm),
     )
   }, [users, searchTerm])
 

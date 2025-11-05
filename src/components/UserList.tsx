@@ -2,7 +2,7 @@
 
 import { memo, useCallback } from "react"
 import UserCard from "./UserCard"
-import type { User } from "../types/user"
+import type { User } from "../../src/hooks/types/user"
 
 interface UserListProps {
   users: User[]

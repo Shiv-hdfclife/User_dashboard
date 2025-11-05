@@ -1,7 +1,7 @@
 "use client"
 
 import { memo } from "react"
-import  { User } from "../types/user"
+import  { User } from "../../src/hooks/types/user"
 
 interface UserCardProps {
     user: User
@@ -16,7 +16,7 @@ const UserCard = memo(({ user, onClick }: UserCardProps) => {
         >
             <h3 className="font-bold text-lg mb-2">{user.name}</h3>
             <p className="text-gray-600 text-sm mb-2">{user.email}</p>
-            <p className="text-gray-500 text-sm">@{user.username}</p>
+            <p className="text-gray-500 text-sm">@{user.name}</p>
         </div>
     )
 })

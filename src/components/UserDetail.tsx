@@ -1,7 +1,7 @@
 "use client"
 
 import { memo } from "react"
-import  { User } from "../types/user"
+import  { User } from "../../src/hooks/types/user"
 
 interface UserDetailProps {
   user: User
@@ -22,7 +22,7 @@ const UserDetail = memo(({ user, onClose }: UserDetailProps) => {
         <div className="p-6 space-y-4">
           <div>
             <p className="text-gray-600 text-sm font-medium">Username</p>
-            <p className="text-gray-900 font-semibold">@{user.username}</p>
+            <p className="text-gray-900 font-semibold">@{user.name}</p>
           </div>
 
           <div>

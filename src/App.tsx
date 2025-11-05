@@ -9,7 +9,7 @@ import SearchBar from "./components/SearchBar"
 import UserList from "./components/UserList"
 import Pagination from "./components/Pagination"
 import LoadingSpinner from "./components/LoadingSpinner"
-import { User, CreateUserPayload } from "./types/user"
+import type { User, CreateUserPayload } from "../src/hooks/types/user"
 import "./App.css"
 
 // Lazy load UserDetail to optimize code splitting
@@ -21,8 +21,8 @@ function App() {
   const { users, isLoading, error, mutate } = useUsers()
   const [searchTerm, setSearchTerm] = useState("")
   const [currentPage, setCurrentPage] = useState(1)
-  const [selectedUser, setSelectedUser] = useState < User | null > (null)
-  const [newUsers, setNewUsers] = useState < User[] > ([])
+  const [selectedUser, setSelectedUser] = useState<User | null>(null)
+  const [newUsers, setNewUsers] = useState<User[]>([])
 
   // Filter users based on search term
   const filteredUsers = useFilter([...users, ...newUsers], searchTerm)
